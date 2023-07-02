@@ -17,8 +17,8 @@ public class SantaKlas {
             double procent = (double) part2 / 90;
             //System.out.println(procent + " procent");
             //double time = altitude + (altitude * procent);
-            int time = (int) Math.round(altitude + (altitude * procent));
-            //System.out.println(Math.round(time));
+            double time = (int) Math.round(altitude + (altitude * procent));
+            System.out.println(Math.round(time));
             System.out.println(Math.round(altitude/Math.cos(Math.toRadians(part2))));
 
         } else {
@@ -27,9 +27,9 @@ public class SantaKlas {
             double procent = (double) part2 / 90;
             //System.out.println(procent);
             //double time = altitude + (altitude * procent);
-            int time = (int) Math.round(altitude + (altitude * procent));
+            double time = (int) Math.round(altitude + (altitude * procent));
             //System.out.println(time);
-            //System.out.println(Math.round(time));
+            System.out.println(Math.round(time));
             System.out.println(Math.round(altitude/Math.cos(Math.toRadians(part2))));
         }
         // print(int(line[0]/math.cos(math.radians(a))))
