@@ -9,29 +9,13 @@ public class SantaKlas {
         int altitude = Integer.parseInt(input[0]);
         int angle = Integer.parseInt(input[1]);
 
-        if((angle >= 0 && angle <= 180) || angle == 360)
+        if((angle >= 0 && angle <= 180))
             System.out.println("safe");
-        else if (angle <= 270) {
-            int part1 = angle - 180;
-            int part2 = 90 - part1;
-            double procent = (double) part2 / 90;
-            //System.out.println(procent + " procent");
-            //double time = altitude + (altitude * procent);
-            double time = (int) Math.round(altitude + (altitude * procent));
-            System.out.println(Math.round(time));
-            System.out.println(Math.round(altitude/Math.cos(Math.toRadians(part2))));
-
+        else if (angle == 270) {
+            System.out.println(altitude);
         } else {
-            int part1 = 360 - angle;
-            int part2 = 90 - part1;
-            double procent = (double) part2 / 90;
-            //System.out.println(procent);
-            //double time = altitude + (altitude * procent);
-            double time = (int) Math.round(altitude + (altitude * procent));
-            //System.out.println(time);
-            System.out.println(Math.round(time));
-            System.out.println(Math.round(altitude/Math.cos(Math.toRadians(part2))));
+            System.out.println((int)(altitude * 1.0) / Math.sin((360 - angle) * 1.0));
         }
-        // print(int(line[0]/math.cos(math.radians(a))))
+
     }
 }
